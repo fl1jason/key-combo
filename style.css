@@ -1,0 +1,104 @@
+:root {
+    --background: #1e90ff;
+    --panel-background: #ffffff;
+}
+
+body {
+
+    margin: 0;
+    padding: 0;
+
+    background-color: var(--background);
+    font-family: "Press Start 2P", system-ui;
+    font-weight: 400;
+    font-style: normal;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+#game {
+    display: flex;
+    flex-direction: column;
+    height: 400px;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--panel-background);
+}
+
+#panel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    height: 200px;
+    width: 500px;   
+}
+
+#countdown {
+    font-size: 2rem;
+}
+
+#combo {
+    animation: fadeInAnimation ease 3s;
+        animation-iteration-count: 1;
+        animation-fill-mode: forwards;
+}
+
+#status {
+    font-size: 1rem;
+}
+
+.indicator {
+    font-size: 2rem;
+}
+
+.correct {
+    color: green;
+}
+
+.incorrect {
+    color: red;
+}
+
+ .shake {
+     animation: shake 0.5s ease;
+ }
+
+@keyframes fadeInAnimation {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+
+ @keyframes shake {
+     0% {
+         transform: translateX(0);
+     }
+
+     25% {
+         transform: translateX(-5px);
+     }
+
+     50% {
+         transform: translateX(5px);
+     }
+
+     75% {
+         transform: translateX(-5px);
+     }
+
+     100% {
+         transform: translateX(0);
+     }
+ }
